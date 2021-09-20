@@ -4,11 +4,11 @@ from playsound import playsound
 
 
 def games(): 
-    print("Games to play:")
+    print("\nGames to play:")
     print("rps")
     print("diceroller")
     print("calculator")
-    all = input('\nWhat game do you want to play: ')
+    all = input('\nWhat game do you want to play: ').lower()
     if all == 'rps':
         print('playing Rock Paper Scissors')
         time.sleep(2)
@@ -29,5 +29,10 @@ def games():
         games()
     else:
         games()
+
+
+print("\nInformation:")
+print("In any game type quit to go back to the game selection menu")
+time.sleep(3)
 
 games()
