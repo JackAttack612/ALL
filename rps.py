@@ -15,8 +15,7 @@ def play():
         play()
     
     elif user == 'quit':
-        import all.py
-        execfile(all.py)
+        import all
 
     if is_win(user, computer):
         print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)

@@ -8,7 +8,6 @@ def select():
         side6()
     elif choice == 'quit':
         import all.py
-        execfile(all.py)
     elif choice == '12':
         side12()
     elif choice == '24':

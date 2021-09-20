@@ -38,7 +38,6 @@ def admin_panel():
 
 def quit1():
     import all.py
-    execfile(all.py)
 
 # Main -------
 
