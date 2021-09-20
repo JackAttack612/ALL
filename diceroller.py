@@ -7,7 +7,9 @@ def select():
     if choice == '6':
         side6()
     elif choice == 'quit':
-        import all.py
+        print('Loading Menu...')
+        time.sleep(2)
+        import all
     elif choice == '12':
         side12()
     elif choice == '24':

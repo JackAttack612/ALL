@@ -12,9 +12,10 @@ def play():
 
     if user == computer:
         print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
-        play()
-    
+        play()   
     elif user == 'quit':
+        print('Loading Menu...')
+        time.sleep(2)
         import all
 
     if is_win(user, computer):
@@ -42,5 +43,4 @@ def is_win(user, computer):
         return True
 
 filelocation = os.path.dirname(__file__)
-input("Press enter to play")
 play()

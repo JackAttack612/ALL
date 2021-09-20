@@ -37,7 +37,7 @@ def admin_panel():
 # Exit -------
 
 def quit1():
-    import all.py
+    import all
 
 # Main -------
 
@@ -46,13 +46,9 @@ def calculator():
         calc = input("\nType calculation or type quit: ").lower()
 
         if calc == 'quit':
-            verify = input("\nAre you sure you want to quit? (Yes or No): ").lower()
-            if verify == 'no':
-                calculator()
-            elif verify == 'yes':
-                quit1()
-            else:
-                calculator()
+            print('Loading Menu...')
+            time.sleep(2)
+            quit1()
         elif calc == 'operations':
             print("\nOperations/Operators:")
             print("+ = addition")
@@ -117,7 +113,7 @@ def calculator():
 
 # Program start -------
 
-print("Version 4.3.5")
+print("\nVersion 4.4")
 print("To see latest version visit https://github.com/JackAttack612/Calculator")
 print("Loading Calculator...")
 time.sleep(2)

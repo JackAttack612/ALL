@@ -31,5 +31,6 @@ def games():
 print("\nInformation:")
 print("In any game type quit to go back to the game selection menu")
 time.sleep(3)
+print('_______________________________________________________________')
 
 games()
