@@ -37,19 +37,8 @@ def admin_panel():
 # Exit -------
 
 def quit1():
-    print("closing in 5 seconds")
-    time.sleep(1)
-    print("closing in 4 seconds")
-    time.sleep(1)
-    print("closing in 3 seconds")
-    time.sleep(1)
-    print("closing in 2 seconds")
-    time.sleep(1)
-    print("closing in 1 second")
-    time.sleep(1)
-    print("closing")
-    time.sleep(1)
-    quit()
+    import all.py
+    execfile(all.py)
 
 # Main -------
 
