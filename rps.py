@@ -13,6 +13,9 @@ def play():
     if user == computer:
         print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
         play()
+    
+    elif user == 'quit':
+        quit()
 
     if is_win(user, computer):
         print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)

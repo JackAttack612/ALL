@@ -3,9 +3,11 @@ import playsound
 import time
 
 def select():
-    choice = input("\nHow many sides do you want (6, 12, 24, 36): ")
+    choice = input("\nHow many sides do you want (6, 12, 24, 36): ").lower()
     if choice == '6':
         side6()
+    elif choice == 'quit':
+        quit()
     elif choice == '12':
         side12()
     elif choice == '24':
