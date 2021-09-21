@@ -4,32 +4,32 @@ from playsound import playsound
 
 
 def games(): 
-    print("\nGames to play:")
+    print("\nProjects:")
     print("rps")
     print("diceroller")
     print("calculator")
-    all = input('\nWhat game do you want to play: ').lower()
+    all = input('\nWhat project do you want to start: ').lower()
     if all == 'rps':
-        print('playing Rock Paper Scissors')
+        print('starting Rock Paper Scissors...')
         time.sleep(2)
         import rps
         games()
     elif all == 'diceroller':
-        print('playing Dice Roller')
+        print('starting Dice Roller...')
         time.sleep(2)
         import diceroller
         games()
     elif all == 'calculator':
-        print('playing calculator')
+        print('starting calculator...')
         time.sleep(2)
         import calculator
         games()
     else:
         games()
 
-
+print("\nLoading Project Menu...")
 print("\nInformation:")
-print("In any game type quit to go back to the game selection menu")
+print("In any project type quit to go back to the project selection menu")
 time.sleep(3)
 print('________________________________________________________________')
 
