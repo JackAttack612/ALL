@@ -3,7 +3,7 @@ import os
 from playsound import playsound
 
 
-def games(): 
+def projects(): 
     print("\nProjects:")
     print("rps")
     print("diceroller")
@@ -13,19 +13,19 @@ def games():
         print('starting Rock Paper Scissors...')
         time.sleep(2)
         import rps
-        games()
+        projects()
     elif all == 'diceroller':
         print('starting Dice Roller...')
         time.sleep(2)
         import diceroller
-        games()
+        projects()
     elif all == 'calculator':
         print('starting calculator...')
         time.sleep(2)
         import calculator
-        games()
+        projects()
     else:
-        games()
+        projects()
 
 print("\nLoading Project Menu...")
 print("\nInformation:")
@@ -33,4 +33,4 @@ print("In any project type quit to go back to the project selection menu")
 time.sleep(3)
 print('________________________________________________________________')
 
-games()
+projects()
