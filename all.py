@@ -12,6 +12,7 @@ def projects():
     print("rps")
     print("diceroller")
     print("calculator")
+    print("twitterbot")
     all2 = input('\nWhat project do you want to start: ').lower()
     if all2 == 'rps':
         print('starting Rock Paper Scissors...')
@@ -28,6 +29,10 @@ def projects():
         time.sleep(2)
         from Projects import calculator
         projects()
+    elif all2 == 'twitterbot':
+        print('starting twitterbot...')
+        time.sleep(2)
+        from Projects import twitter-bot
     else:
         projects()
 

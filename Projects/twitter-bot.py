@@ -64,7 +64,7 @@ def mentioned():
 def main():
     start = input("\nWhat do you want to do: ").lower()
     if start == 'help':
-        print("tweet\nread\nuserinfo\nlikementioned\nmentioned")
+        print("quit\ntweet\nread\nuserinfo\nlikementioned\nmentioned")
         main()
     elif start == 'tweet':
         confirmation = input("\nAre you sure you want to send a tweet (Yes or No): ").lower()
@@ -83,6 +83,8 @@ def main():
         like_mentioned()
     elif start == 'mentioned':
         mentioned()
+    elif start == 'quit':
+        import all
     else:
         print("\nDid not receive a valid input")
         main()
@@ -94,6 +96,8 @@ def Login():
         print("\nLogin Sucessful")
         time.sleep(2)
         main()
+    elif Username or Password == 'quit':
+        import all
     else:
         print("Username or Password is incorrect")
         Login()
