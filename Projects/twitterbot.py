@@ -34,11 +34,13 @@ def user_info():
     try:
         user_info_name = input("\nWhat user do you want to find: ")
         user = api.get_user(user_info_name)
-
+        followers_count = user.followers_count
+  
         print("User details:")
         print('Username: ' + user.name)
         print('User Description: ' + user.description)
         print('User Location: ' + user.location)
+        print("Followers: " + str(followers_count))
 
         print("\nLast 20 Followers:")
         for follower in user.followers():
