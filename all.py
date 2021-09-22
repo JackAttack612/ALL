@@ -2,6 +2,8 @@ from io import open_code
 import time
 import os
 from playsound import playsound
+import ctypes
+from os import system
 
 def projects(): 
     print("\nProjects:")
@@ -35,4 +37,6 @@ print('________________________________________________________________')
 
 directory = os.path.dirname(__file__)
 dicepath = (directory + r'/Projects/diceroller.py')
+kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
+kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
 projects()
