@@ -20,13 +20,13 @@ def play():
 
     if is_win(user, computer):
         print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)
-        playsound(filelocation + r'\Sound\win.wav')
+        playsound(filelocation + r'\Audio\win.wav')
         input("\nPress enter to play again")
         play()
 
     if is_win(computer, user):
         print('\nYou lost!!\nYour Choice: ' + user + ". Their Choice: " + computer)
-        playsound(filelocation + r'\Sound\lose.wav')
+        playsound(filelocation + r'\Audio\lose.wav')
         input("\nPress enter to play again")
         play()
     
