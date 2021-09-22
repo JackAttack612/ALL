@@ -32,7 +32,7 @@ def projects():
     elif all2 == 'twitterbot':
         print('starting twitterbot...')
         time.sleep(2)
-        from Projects import twitter-bot
+        from Projects import twitterbot
     else:
         projects()
 
