@@ -22,7 +22,7 @@ def audrey():
         calculator()
 
 def admin_panel():
-    name = input("What is your name:").lower()
+    name = input("Enter Input:").lower()
     if name == 'nuke':
         print("Okay, nuking")
         playsound(location + r'\Audio\nuke.mp3')
@@ -30,8 +30,8 @@ def admin_panel():
     elif name == 'audrey':
         audrey()
     else:
-        print("Cool don't care")
-        print("You wasted your time getting here it does nothing")
+        print("That input does not exist")
+        print("Your input: " + name)
         calculator()
 
 # Exit -------
