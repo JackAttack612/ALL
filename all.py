@@ -5,6 +5,8 @@ from playsound import playsound
 import ctypes
 from os import system
 
+
+# Main
 def projects(): 
     print("\nProjects:")
     print("rps")
@@ -29,14 +31,20 @@ def projects():
     else:
         projects()
 
+# Naming Terminal
+kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
+kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
+
+# Fake Loading
 print("\nLoading Project Menu...")
 print("\nInformation:")
 print("In any project type quit to go back to the project selection menu")
 time.sleep(3)
 print('________________________________________________________________')
 
+# Directory 
 directory = os.path.dirname(__file__)
 dicepath = (directory + r'/Projects/diceroller.py')
-kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
-kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
+
+# Start
 projects()
