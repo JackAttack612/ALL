@@ -7,6 +7,7 @@ import tkinter
 import os
 from playsound import playsound
 import multiprocessing
+import pwinput
 
 # Eastereggs -------
 
@@ -63,7 +64,7 @@ def calculator():
             print("_______________________")
             calculator()
         elif calc == 'admin':
-            admin1 = input("\nEnter Password:")
+            admin1 = pwinput.pwinput()
             if admin1 == 'Madjack612!':
                 admin_panel()
             else:
