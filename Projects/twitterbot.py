@@ -9,7 +9,7 @@ api = tweepy.API(auth)
 
 try:
     api.verify_credentials()
-    print("Authentication OK")
+    print("\nAuthentication OK")
 
 except:
     print("Error during authentication")
@@ -119,10 +119,10 @@ def main():
         main()
 
 def guest():
-    print("type help to get a list of things you can do")
     start = input("\nWhat do you want to do: ").lower()
     if start == 'help':
         print('quit\nread\nuserinfo')
+        guest()
     elif start == 'read':
         gread()
     elif start == 'userinfo':
@@ -143,11 +143,12 @@ def Login():
         print("Login Sucessful")
         print("Guest Mode: Limited Abilities")
         time.sleep(3)
+        print("type help to get a list of things you can do")
         guest()
     elif Username or Password == 'quit':
         import all
     else:
         print("Username or Password is incorrect")
         Login()
-print("Guest Login:\nUsername: Guest\nPassword: Guest123")
+print("\nGuest Login:\nUsername: Guest\nPassword: Guest123")
 Login()
