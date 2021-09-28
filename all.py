@@ -18,21 +18,26 @@ def projects():
         print('starting Rock Paper Scissors...')
         time.sleep(2)
         from Projects import rps
+        open(rps.py)
         projects()
     elif all2 == 'diceroller':
         print('starting Dice Roller...')
         time.sleep(2)
         from Projects import diceroller
+        open(diceroller.py)
         projects()
     elif all2 == 'calculator':
         print('starting calculator...')
         time.sleep(2)
         from Projects import calculator
+        open(calculator.py)
         projects()
     elif all2 == 'twitterbot':
         print('starting twitterbot...')
         time.sleep(2)
         from Projects import twitterbot
+        open(twitterbot.py)
+        projects()
     else:
         projects()
 
