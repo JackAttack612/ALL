@@ -31,7 +31,11 @@ def play():
     if user == computer:
         print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
         play()   
-    if user == 'r' or 'p' or 's':
+    if user == 'r':
+        action()
+    elif user == 'p':
+        action()
+    elif user == 's':
         action()
     elif user == 'quit':
         print('Loading Menu...')
