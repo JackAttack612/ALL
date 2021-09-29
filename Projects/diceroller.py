@@ -18,6 +18,8 @@ def select():
         side36()
     elif choice == "69":
         sixnine()
+    elif choice == '420':
+        fourtwenty()
     else:
         print("\nPlease Choose 6, 12, 24, or 36")
         time.sleep(3)
@@ -45,6 +47,10 @@ def side36():
 
 def sixnine():
     print("\nHAHAHAHAHA, Ur so funny")
+    select()
+
+def fourtwenty():
+    print("\nSmokin weed everyday, 42000000000000000000000000000000000000")
     select()
 
 select()
