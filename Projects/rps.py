@@ -7,20 +7,20 @@ from time import sleep
 
 def play():
         
-    user = input("\nWhat is your choice? 'r' for rock, 'p' for paper, and 's' for scissors: ").lower()
+    user = input("What is your choice? 'r' for rock, 'p' for paper, and 's' for scissors: ").lower()
     computer = random.choice(['r', 'p', 's'])
 
     def action():
         if is_win(user, computer):
             print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)
             playsound(filelocation + r'\Audio\win.wav')
-            input("\nPress enter to play again")
+            print("") #error occurs if not here (Dont know why)
             play()
 
         if is_win(computer, user):
             print('\nYou lost!!\nYour Choice: ' + user + ". Their Choice: " + computer)
             playsound(filelocation + r'\Audio\lose.wav')
-            input("\nPress enter to play again")
+            print("") #error occurs if not here (Dont know why)
             play()
         else:
             print("\nError!!!\nYou have to type 'r', 'p', or 's'")
@@ -29,7 +29,7 @@ def play():
             play()
 
     if user == computer:
-        print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
+        print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer + "\n")
         play()   
     if user == 'r':
         action()

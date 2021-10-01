@@ -17,6 +17,7 @@ def projects():
     if all2 == 'rps':
         print('starting Rock Paper Scissors...')
         time.sleep(2)
+        print("")
         from Projects import rps
         open(rps.py)
         projects()
