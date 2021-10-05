@@ -17,6 +17,7 @@ except:
 api = tweepy.API(auth, wait_on_rate_limit=True,
     wait_on_rate_limit_notify=True)
 
+# Things to do
 def read():
     timeline = api.home_timeline()
     for tweet in timeline:
@@ -90,6 +91,7 @@ def mentioned():
     time.sleep(3)
     main()
         
+# Function Menu
 def main():
     start = input("\nWhat do you want to do: ").lower()
     if start == 'help':
@@ -118,6 +120,7 @@ def main():
         print("\nDid not receive a valid input")
         main()
 
+# Guest Functions
 def guest():
     start = input("\nWhat do you want to do: ").lower()
     if start == 'help':
@@ -132,6 +135,7 @@ def guest():
     else:
         guest()
 
+# Login
 def Login():
     Username = input("\nUsername: ")
     Password = pwinput.pwinput()

@@ -46,7 +46,7 @@ def projects():
 kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
 kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
 
-# Fake Loading
+# Loading
 print("\nLoading Project Menu...")
 print("\nInformation:")
 print("In any project type quit to go back to the project selection menu")
