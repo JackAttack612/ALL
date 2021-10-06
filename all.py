@@ -19,19 +19,22 @@ def projects():
         time.sleep(2)
         print("")
         from Projects import rps
-        open(rps.py)
+        open(rps)
+        print("Can't start program more than once")
         projects()
     elif all2 == 'diceroller':
         print('starting Dice Roller...')
         time.sleep(2)
         from Projects import diceroller
-        open(diceroller.py)
+        open(diceroller)
+        print("Can't start program more than once")
         projects()
     elif all2 == 'calculator':
         print('starting calculator...')
         time.sleep(2)
         from Projects import calculator
-        open(calculator.py)
+        open(calculator)
+        print("Can't start program more than once")
         projects()
     elif all2 == 'twitterbot':
         print('starting twitterbot...')
