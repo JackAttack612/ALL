@@ -10,54 +10,6 @@ import tweepy
 from random import randint
 import random
 
-
-# Main
-def projects(): 
-    print("\nProjects:")
-    print("rps")
-    print("diceroller")
-    print("calculator")
-    print("twitterbot")
-    all2 = input('\nWhat project do you want to start: ').lower()
-    if all2 == 'rps':
-        print('starting Rock Paper Scissors...')
-        time.sleep(2)
-        print("")
-        proj_rps()
-        projects()
-    elif all2 == 'diceroller':
-        print('starting Dice Roller...')
-        time.sleep(2)
-        proj_diceroller()
-        projects()
-    elif all2 == 'calculator':
-        print('starting calculator...')
-        time.sleep(2)
-        proj_calculator()
-    elif all2 == 'twitterbot':
-        print('starting twitterbot...')
-        time.sleep(2)
-        proj_twitterbot()
-    else:
-        projects()
-
-# Naming Terminal
-kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
-kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
-
-# Loading
-print("\nLoading Project Menu...")
-print("\nInformation:")
-print("In any project type quit to go back to the project selection menu")
-time.sleep(3)
-print('________________________________________________________________')
-
-# Directory 
-directory = os.path.dirname(__file__)
-
-# Start
-projects()
-
 def proj_calculator():
     # Eastereggs -------
 
@@ -446,3 +398,49 @@ def proj_twitterbot():
             Login()
     print("\nGuest Login:\nUsername: Guest\nPassword: Guest123")
     Login()
+
+# Main
+def projects(): 
+    print("\nProjects:")
+    print("rps")
+    print("diceroller")
+    print("calculator")
+    print("twitterbot")
+    all2 = input('\nWhat project do you want to start: ').lower()
+    if all2 == 'rps':
+        print('starting Rock Paper Scissors...')
+        time.sleep(2)
+        print("")
+        proj_rps()
+    elif all2 == 'diceroller':
+        print('starting Dice Roller...')
+        time.sleep(2)
+        proj_diceroller()
+    elif all2 == 'calculator':
+        print('starting calculator...')
+        time.sleep(2)
+        proj_calculator()
+    elif all2 == 'twitterbot':
+        print('starting twitterbot...')
+        time.sleep(2)
+        proj_twitterbot()
+    else:
+        projects()
+
+# Naming Terminal
+kernel32 = ctypes.WinDLL('kernel32', use_last_error=True);
+kernel32.SetConsoleTitleW(u"Python Project Menu Terminal")
+
+# Loading
+print("\nLoading Project Menu...")
+print("\nInformation:")
+print("In any project type quit to go back to the project selection menu")
+time.sleep(3)
+print('________________________________________________________________')
+
+# Directory 
+directory = os.path.dirname(__file__)
+
+# Start
+projects()
+
