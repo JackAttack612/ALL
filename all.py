@@ -115,11 +115,6 @@ def proj_calculator():
             calculator()
 
     # Program start -------
-
-    print("\nVersion 4.4")
-    print("To see latest version visit https://github.com/JackAttack612/Calculator")
-    print("Loading Calculator...")
-    time.sleep(2)
     print("\nOperations/Info:")
     print("+ = addition")
     print("- = subtracion")
@@ -443,4 +438,3 @@ directory = os.path.dirname(__file__)
 
 # Start
 projects()
-
