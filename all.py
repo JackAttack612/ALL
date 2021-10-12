@@ -1,3 +1,4 @@
+# imports
 from io import open_code
 import time
 import os
@@ -9,6 +10,9 @@ import random
 import tweepy
 from random import randint
 import random
+import traceback
+import colorama
+from colorama import Fore
 
 def proj_calculator():
     # Eastereggs -------
@@ -184,23 +188,32 @@ def proj_rps():
     filelocation = os.path.dirname(__file__)
     play()
 
-def proj_diceroller():
+def proj_numgenerator():
     def select():
         try:
-            choice = input("\nHow many sides do you want: ").lower()
-            if choice == 'quit':
+            choice_min = input("\nMinimum: ").lower()
+            if choice_min == 'quit':
+                projects()
+            choice_max = input("Maximum: ").lower()
+            if choice_max == 'quit':
                 projects()
             else:
-                roll = random.randint(1, int(choice))
-                print("You rolled: " + str(roll))
+                generate = random.randint(int(choice_min), int(choice_max))
+                print("Your number is: " + str(generate))
                 select()
         except ValueError:
-            print("\n⚠")
-            print("ValueError: You have to input a number")
+            print(Fore.RED + "\n⚠")
+            print("Error type: ValueError")
+            print("\nWhy this might be happening:\n> Your Minimum amount was more than your maximum\n> You didn't input numbers")
             print("⚠")
-            time.sleep(2)
-            select()
-
+            time.sleep(1)
+            advanced_Traceback = input(Fore.WHITE + "\nPress enter to retry or type 'advanced' to see full error message: ").lower()
+            if advanced_Traceback == 'advanced':
+                print("\n" + traceback.format_exc())
+                input("\nPress enter to continue")
+                select()
+            else:
+                select()
 
     select()
 
@@ -364,7 +377,7 @@ def proj_twitterbot():
 def projects(): 
     print("\nProjects:")
     print("rps")
-    print("diceroller")
+    print("numgenerator")
     print("calculator")
     print("twitterbot")
     all2 = input('\nWhat project do you want to start: ').lower()
@@ -373,10 +386,10 @@ def projects():
         time.sleep(2)
         print("")
         proj_rps()
-    elif all2 == 'diceroller':
-        print('starting Dice Roller...')
+    elif all2 == 'numgenerator':
+        print('starting Number Generator...')
         time.sleep(2)
-        proj_diceroller()
+        proj_numgenerator()
     elif all2 == 'calculator':
         print('starting calculator...')
         time.sleep(2)
